@@ -1,4 +1,5 @@
 require "guardian/version"
+require 'guardian/engine'
 
 module Guardian
 	THRESHOLD = 2
