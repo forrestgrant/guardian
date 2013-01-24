@@ -1,9 +1,8 @@
 require "guardian/version"
 require 'guardian/engine'
+ActionController::Base.send(:include, Guardian)
 
 module Guardian
-
-  extend ActiveSupport::Concern
 
   included do
     append_before_filter :guard
