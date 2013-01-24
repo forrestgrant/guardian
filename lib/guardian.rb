@@ -6,7 +6,7 @@ module Guardian
   extend ActiveSupport::Concern
 
   included do
-    hide_action :guard
+    append_before_filter :guard
   end
     
   def guard(vars = { :threshold => 2})
