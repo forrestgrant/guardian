@@ -12,12 +12,11 @@ module Guardian
 
   def guard
   	if guarded?(params)
-  		logger.info "GUARD IT!!" unless params[:guardian_duration].to_i > THRESHOLD
-  		redirect_to "/" unless params[:guardian_duration].to_i > THRESHOLD
+  		redirect_to "/" unless params[:duration].to_i > THRESHOLD
   	end
   end
 
   def guarded?(params)
-  	params.keys.include?('guardian_duration')
+  	params.keys.include?('duration')
   end
 end

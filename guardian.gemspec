@@ -7,10 +7,9 @@ Gem::Specification.new do |gem|
   gem.name          = "guardian"
   gem.version       = Guardian::VERSION
   gem.authors       = ["Forrest Grant"]
-  gem.email         = ["fgrant@atlantistech.com"]
+  gem.email         = ["forrest@forrestgrant.com"]
   gem.description   = "Protect web forms form spam."
-  gem.summary       = "Protect web forms from sapm."
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/forrestgrant/guardian"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

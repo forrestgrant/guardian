@@ -16,7 +16,7 @@
 	}; 
   var options = $.extend(defaults, options);
   this.each(function() {
-    $(this).append($('<input type="hidden" name="duration" id="guardian-duration" value="0" />'));
+    $(this).append($('<input type="hidden" name="duration" id="guardian_duration" value="0" />'));
   	setInterval((function() {
 	    $('input[name=duration]').val(parseInt($('input[name=duration]').val()) + 1);
 	  }), 1000);
