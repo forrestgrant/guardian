@@ -1,4 +1,4 @@
-module YourGem
+module Guardian
   class Engine < Rails::Engine
   end
 end

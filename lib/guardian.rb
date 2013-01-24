@@ -3,14 +3,19 @@ require 'guardian/engine'
 ActionController::Base.send(:include, Guardian)
 
 module Guardian
-
-  included do
-    append_before_filter :guard
-  end
     
   def guard(vars = { :threshold => 2})
   	if guarded?(params)
-  		redirect_to "/" unless params[:duration].to_i > vars[:threshold]
+      if params[:duration].to_i < vars[:threshold]
+        logger.info "\n"
+        logger.info "+++++++++++++++++++++++++++++++++++++"
+        logger.info "GUARDIAN IS REJECTION FORM SUBMISSION"
+        logger.info "Page duration: #{params[:duration]}"
+        logger.info "Threhold: #{vars[:threshold]}"
+        logger.info "+++++++++++++++++++++++++++++++++++++"
+        logger.info "\n"
+  		  redirect_to "/"
+      end
   	end
   end
 

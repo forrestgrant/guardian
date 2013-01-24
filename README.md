@@ -1,29 +1,34 @@
-# Guardian
+Guardian
+====================
 
-TODO: Write a gem description
+Guardian protects web forms from spam.  By adding a hidden input field that counts up, guardian will reject submissions with a duration less than any threshold we deem appropriate (defualt is 2 seconds).
 
-## Installation
 
-Add this line to your application's Gemfile:
+## Install
+### RubyGems.org
+	$ gem install guardian
 
-    gem 'guardian'
+### from source
+	$ git clone http://github.com/forrestgrant/guardian
+	$ cd guardian
+	$ rake build
+	$ rake install
 
-And then execute:
+Usage
+==========
 
-    $ bundle
+Set a before filter in your controller
 
-Or install it yourself as:
+	before_filter :guard
 
-    $ gem install guardian
+Or
 
-## Usage
+	before_filter { |c| c.guard({:threshold => 5})} # 5 seconds
 
-TODO: Write usage instructions here
+Add guardian to `application.js`
+	
+	//= require jquery.guardian
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Set Guard specific forms in views
+	
+	$('form').guard();
