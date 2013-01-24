@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Forrest Grant"]
   gem.email         = ["forrest@forrestgrant.com"]
   gem.description   = "Protect web forms form spam."
+  gem.summary       = "Protect your forms from spam, by adding a duration field, if it takes less than 2 seconds to submit the form, it is likely spam."
   gem.homepage      = "https://github.com/forrestgrant/guardian"
 
   gem.files         = `git ls-files`.split($/)
