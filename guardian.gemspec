@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'guardian/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "guardian"
+  gem.name          = "guardian-forms"
   gem.version       = Guardian::VERSION
   gem.authors       = ["Forrest Grant"]
   gem.email         = ["forrest@forrestgrant.com"]

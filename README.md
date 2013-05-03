@@ -6,7 +6,7 @@ Guardian protects web forms from spam.  By adding a hidden input field that coun
 
 ## Install
 ### RubyGems.org
-	$ gem install guardian
+	$ gem install guardian-forms
 
 ### from source
 	$ git clone http://github.com/forrestgrant/guardian
