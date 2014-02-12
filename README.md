@@ -14,6 +14,10 @@ Guardian protects web forms from spam.  By adding a hidden input field that coun
 	$ rake build
 	$ rake install
 
+### add to your Gemfile
+
+	gem 'guardian-forms', require: 'guardian'
+
 Usage
 ==========
 
