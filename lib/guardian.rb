@@ -5,7 +5,7 @@ ActionController::Base.send(:include, Guardian)
 module Guardian
     
   def guard(vars = { :threshold => 2})
-    if params[:duration] && params[:duration].to_i < vars[:threshold]
+    if params[:duration].blank? || params[:duration] && params[:duration].to_i < vars[:threshold]
       logger.info "\n"
       logger.info "+++++++++++++++++++++++++++++++++++++"
       logger.info "GUARDIAN IS REJECTION FORM SUBMISSION"
